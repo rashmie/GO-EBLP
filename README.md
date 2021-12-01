@@ -5,7 +5,7 @@ An evidence-based lexical pattern approach for quality assurance of Gene Ontolog
  Python implementation of an approach to automatically audit relationships in the Gene Ontology (GO). The paper can be found at:
 
 ## Requirements
- Pandas, spaCy, and tqdm is required to run this code.
+ Pandas (1.2.4 recommended), spaCy (3.0.5 recommended), and tqdm (4.62.3 recommended) is required to run this code.
 
  ## Inputs
  Takes four inputs (examples are given in the "inputs" folder):
