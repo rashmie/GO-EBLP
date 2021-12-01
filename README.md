@@ -1,5 +1,5 @@
 # Gene Ontology auditing with evidence based lexical patterns
-An evidence-based lexical pattern approach for quality assurance of Gene Ontology relations
+An evidence-based lexical pattern approach for quality assurance of Gene Ontology relations.
 
 ## About
  Python implementation of an approach to automatically audit relationships in the Gene Ontology (GO). The paper can be found at:

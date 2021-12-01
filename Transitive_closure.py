@@ -1,7 +1,6 @@
 ## Transitive closure considering the combination of different types of relations in GO
 
 import csv
-#from tqdm import tqdm
 
 concept_dict = None #key = con id, value = Concept instance
 
