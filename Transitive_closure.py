@@ -108,6 +108,7 @@ class Concept:
         if 'regulates' in self.parents:
             regulates_ancs.update(self.parents['regulates'])  # regulates of parents
             for regulates_anc in self.parents['regulates']:
+                regulates_ancs.update(concept_dict[regulates_anc].regulates_ancestors())   # regulates ancestors of regulates parents
                 regulates_ancs.update(concept_dict[regulates_anc].is_a_ancestors())  # isa ancestors of regulates parents
 
         self.ancestors['regulates'] = regulates_ancs
@@ -234,5 +235,13 @@ def compute_closure(labels_file, all_rels_file, pos_tags_file):
         rt = con.find_root()
         roots.add(rt)
     print(roots)
+
+    return concept_dict
+
+
+def get_ont_with_direct_rels(labels_file, all_rels_file, pos_tags_file):
+    load_concepts(labels_file)
+    load_parents(all_rels_file)
+    load_POS_tags_of_concepts(pos_tags_file)
 
     return concept_dict
